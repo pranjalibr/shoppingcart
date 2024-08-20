@@ -13,7 +13,6 @@
 
 .product {
   border-radius: 15px;
-  width: 300px;
   height: 350px;
   margin: 100px;
   display: flex;
@@ -23,7 +22,7 @@
 }
 
 .product img {
-  width: 400px;
+  width: 100% !important;
 }
 
 .product .description {
@@ -69,7 +68,7 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
   .products {
     grid-template-columns: 1fr;
   }
