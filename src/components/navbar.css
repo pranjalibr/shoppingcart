@@ -7,8 +7,8 @@
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
-
 
 .hamburger {
   display: none;
@@ -24,7 +24,6 @@
 }
 
 .links {
-  margin-right: 50px;
   display: flex;
   align-items: center;
 }
@@ -34,16 +33,16 @@
   color: white;
   margin-left: 20px;
   font-size: 25px;
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 768px) {
   .navbar {
-    justify-content: flex-start;
+    padding: 0 20px;
   }
 
   .hamburger {
     display: flex;
-    margin-right: 20px;
   }
 
   .links {
@@ -60,6 +59,8 @@
 
   .links.active {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .links a {
@@ -69,7 +70,11 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
   .links a {
     font-size: 18px;
   }
